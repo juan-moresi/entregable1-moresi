@@ -26,3 +26,9 @@ let monedas = [
 ];
 
 
+// Función para obtener el nombre de una moneda
+
+function obtenerNombreMoneda(codigo) {
+    const moneda = monedas.find((moneda) => moneda.codigo === codigo);
+    return moneda ? moneda.nombre : "Moneda desconocida";
+}
