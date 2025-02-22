@@ -60,3 +60,18 @@ function convertirMoneda(cantidad, monedaOrigen, monedaDestino) {
         nombreDestino: obtenerNombreMoneda(monedaDestino),
     };
 }
+
+// Función para agregar una nueva moneda
+
+function agregarMoneda() {
+    const codigo = prompt(textos.codigo).toUpperCase();
+    const nombre = prompt(textos.nombre);
+    const tasa = parseFloat(prompt(textos.tasa));
+
+    if (codigo && nombre && !isNaN(tasa)) {
+        monedas.push({ codigo, nombre, tasa });
+        alert(textos.agregada(codigo, nombre));
+    } else {
+        alert(textos.datoInvalido);
+    }
+}
