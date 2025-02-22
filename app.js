@@ -75,3 +75,43 @@ function agregarMoneda() {
         alert(textos.datoInvalido);
     }
 }
+
+// Menú principal
+
+function menu() {
+    while (true) {
+        const opcion = prompt(textos.menu);
+
+        if (opcion === "1") {
+            const cantidad = parseFloat(prompt(textos.cantidad));
+            const monedaOrigen = prompt(textos.monedaOrigen).toUpperCase();
+            const monedaDestino = prompt(textos.monedaDestino).toUpperCase();
+
+            const resultado = convertirMoneda(cantidad, monedaOrigen, monedaDestino);
+
+            if (typeof resultado === "string") {
+                alert(resultado);
+            } else {
+                alert(
+                    textos.resultado(
+                        cantidad,
+                        resultado.nombreOrigen,
+                        resultado.cantidad,
+                        resultado.nombreDestino
+                    )
+                );
+            }
+        } else if (opcion === "2") {
+            agregarMoneda();
+        } else if (opcion === "3") {
+            alert(textos.salir);
+            break;
+        } else {
+            alert(textos.opcionInvalida);
+        }
+    }
+}
+
+// Inicio de menu
+
+menu();
