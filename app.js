@@ -32,3 +32,31 @@ function obtenerNombreMoneda(codigo) {
     const moneda = monedas.find((moneda) => moneda.codigo === codigo);
     return moneda ? moneda.nombre : "Moneda desconocida";
 }
+
+// Función para convertir moneda
+
+function convertirMoneda(cantidad, monedaOrigen, monedaDestino) {
+    let tasaOrigen, tasaDestino;
+
+    for (let i = 0; i < monedas.length; i++) {
+        if (monedas[i].codigo === monedaOrigen) {
+            tasaOrigen = monedas[i].tasa;
+        }
+        if (monedas[i].codigo === monedaDestino) {
+            tasaDestino = monedas[i].tasa;
+        }
+    }
+
+    if (tasaOrigen === undefined || tasaDestino === undefined) {
+        return textos.monedaNoSoportada;
+    }
+
+    const cantidadEnUSD = cantidad / tasaOrigen;
+    const cantidadConvertida = cantidadEnUSD * tasaDestino;
+
+    return {
+        cantidad: cantidadConvertida.toFixed(2),
+        nombreOrigen: obtenerNombreMoneda(monedaOrigen),
+        nombreDestino: obtenerNombreMoneda(monedaDestino),
+    };
+}
