@@ -7,8 +7,8 @@ const textos = {
     monedaDestino: "Ingresa la moneda de destino (ejemplo: USD, EUR, ARS):",
     resultado: (cantidad, nombreOrigen, resultado, nombreDestino) =>
         `${cantidad} ${nombreOrigen} equivale a ${resultado} ${nombreDestino}`,
-    codigo: "Ingresa el código de la nueva moneda (ejemplo: BRL, CNY):",
-    nombre: "Ingresa el nombre de la nueva moneda (ejemplo: Real brasilero, Yuan chino):",
+    codigo: "Ingresa el código de la nueva moneda (ejemplo: BRL):",
+    nombre: "Ingresa el nombre de la nueva moneda (ejemplo: Real brasilero):",
     tasa: "Ingresa la tasa de cambio respecto al USD (ejemplo: 5.0):",
     agregada: (codigo, nombre) => `Moneda ${codigo} (${nombre}) agregada correctamente.`,
     datoInvalido: "Datos inválidos. No se pudo agregar la moneda.",
