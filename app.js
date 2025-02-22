@@ -20,9 +20,9 @@ const textos = {
 //array de objetos con la informacion de las monedas
 
 let monedas = [
-    { codigo: "USD", nombre: "Dólar estadounidense", tasa: 1.0 },
-    { codigo: "EUR", nombre: "Euro", tasa: 0.96 },
-    { codigo: "ARS", nombre: "Peso argentino", tasa: 1057.77 },
+    { codigo: "USD", nombre: "Dólares estadounidenses", tasa: 1.0 },
+    { codigo: "EUR", nombre: "Euros", tasa: 0.96 },
+    { codigo: "ARS", nombre: "Pesos argentinos", tasa: 1057.77 },
 ];
 
 
