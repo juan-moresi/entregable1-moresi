@@ -1,4 +1,4 @@
-//definicion de textos del menu
+//definicion de textos
 
 const textos = {
     menu: "Selecciona una opción:\n1. Convertir moneda\n2. Agregar nueva moneda\n3. Salir",
